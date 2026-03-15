@@ -4,6 +4,9 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+import counter from './counter';
+import Counter from './counter'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -37,10 +40,10 @@ function App() {
 
       <button onClick={handleClick2}>Click 2</button>
 
-      <button onClick={() =>handle5(25)}>click 5</button>   {/*ekhane amra handle5 function e 5 jog korechi and ekhane button e eshe eta amra call korechi onclick er vitor arrow symble diye ,,arrow symble er vitor oi function take call kore oi 5 er sathe ekhaner double bracket er somgkha take jog korechi...  */}
+      <button onClick={() => handle5(25)}>click 5</button>   {/*ekhane amra handle5 function e 5 jog korechi and ekhane button e eshe eta amra call korechi onclick er vitor arrow symble diye ,,arrow symble er vitor oi function take call kore oi 5 er sathe ekhaner double bracket er somgkha take jog korechi...  */}
 
-      
 
+      <Counter></Counter>
 
 
       <section id="spacer"></section>
