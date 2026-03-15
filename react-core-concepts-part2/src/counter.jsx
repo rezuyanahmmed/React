@@ -4,6 +4,12 @@ export default function Counter() {
 
   const [count, setCount] = useState(0);
 
+  const handleAdd = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+    
+  }
+
   const counterStyle = {
     border: '2px solid red'
   }
@@ -11,7 +17,7 @@ export default function Counter() {
   return (
     <div style={counterStyle}>
       <h3>Count: {count}</h3>
-      <button>Add</button>
+      <button onClick={handleAdd}>Add</button>
     </div>
   )
 
