@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -6,6 +6,8 @@ import './App.css'
 
 import counter from './counter';
 import Counter from './counter'
+
+import Friends from './friends'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,6 +46,10 @@ function App() {
 
 
       <Counter></Counter>
+
+      <Suspense fallback={<h2>Friends are comming for treat...</h2>}>
+        <Friends></Friends>
+      </Suspense>
 
 
       <section id="spacer"></section>
