@@ -26,6 +26,13 @@ function App() {
     const newNum = num + 5;
     alert(newNum);
   }
+  // posts er
+  const fetchPosts = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    return res.json();
+  }
+
+  const postsPormise = fetchPosts()
 
   return (
     <>
@@ -55,7 +62,7 @@ function App() {
 
       {/* posts er  */}
       <Suspense fallback={<h4>Posts are comming...</h4>}>
-      <Post></Post>
+        <Post postsPormise={postsPormise}></Post>
       </Suspense>
 
 
