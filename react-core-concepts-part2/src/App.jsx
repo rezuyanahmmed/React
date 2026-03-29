@@ -9,6 +9,8 @@ import Counter from './counter'
 
 import Friends from './friends'
 
+import Post from './post'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -49,6 +51,11 @@ function App() {
 
       <Suspense fallback={<h2>Friends are comming for treat...</h2>}>
         <Friends></Friends>
+      </Suspense>
+
+      {/* posts er  */}
+      <Suspense fallback={<h4>Posts are comming...</h4>}>
+      <Post></Post>
       </Suspense>
 
 
