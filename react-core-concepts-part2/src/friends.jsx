@@ -1,3 +1,5 @@
+import friend from "./friend"
+
 export default function Friends() {
   return (
     <div className="card">
