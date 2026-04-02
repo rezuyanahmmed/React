@@ -1,1 +1,7 @@
-function Countries
+function Countries() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
