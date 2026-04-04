@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Country = () => {
+const Country = ({ country }) => {
   return (
     <div>
-      <h3>name:</h3>
+      <h3>name: {country.name.common}</h3>
     </div>
   );
 };
