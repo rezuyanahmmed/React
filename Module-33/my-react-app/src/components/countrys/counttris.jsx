@@ -8,6 +8,7 @@ const Counttris = ({ countriesPromise }) => {
   return (
     <div>
       <h1>Our countries: {countries.length}</h1>
+      <h1>Our countries: {countries.name}</h1>
     </div>
   );
 };
