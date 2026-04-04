@@ -2,8 +2,13 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
+import { Suspense } from 'react'
 import './App.css'
 import Counttris from './components/countrys/counttris'
+
+
+const countriesPromise = fetch('https://openapi.programming-hero.com/api/all')
+  .then(res => res.json())
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,7 +27,20 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p> */}
         </div>
-        <Counttris></Counttris>
+
+
+        <Suspense fallback={<p>please wait...</p>}>
+          <Counttris countriesPromise={countriesPromise}></Counttris>
+        </Suspense>
+
+
+
+
+
+
+
+
+
         {/* <button
           className="counter"
           onClick={() => setCount((count) => count + 1)}

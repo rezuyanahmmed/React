@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { use } from 'react';
 
-const Counttris = () => {
+const Counttris = ({countriesPromise}) => {
+  const countries = use(countriesPromise)
+  console.log(countries);
+  
   return (
     <div>
       <h1>Hello</h1>
