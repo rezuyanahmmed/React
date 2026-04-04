@@ -7,7 +7,7 @@ const Counttris = ({ countriesPromise }) => {
 
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Our countries: {countries.length}</h1>
     </div>
   );
 };
