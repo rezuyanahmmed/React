@@ -3,7 +3,7 @@
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 import './App.css'
-
+import Counttris from './components/countrys/counttris'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,7 +22,7 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p> */}
         </div>
-        <countries></countries>
+        <Counttris></Counttris>
         {/* <button
           className="counter"
           onClick={() => setCount((count) => count + 1)}
