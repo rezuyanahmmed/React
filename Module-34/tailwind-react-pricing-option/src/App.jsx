@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
+import DaisyNav from './components/DaisyNav/DaisyNav'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,17 +9,16 @@ function App() {
   return (
     <>
       <section id="center">
-        
+
         <div>
-          <h1 className='text-5xl'>Get started</h1>
-          
+          <DaisyNav></DaisyNav>
         </div>
-        
+
       </section>
 
-     
 
-      
+
+
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
