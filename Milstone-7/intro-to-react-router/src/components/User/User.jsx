@@ -22,7 +22,10 @@ const User = ({ user }) => {
       <p>Email:{email} </p>
       <p><small>Phone Number: {phone}</small></p>
       <Link to={`/users/${id}`}>Show details</Link>
-      <button onClick={() => setshowInfo(!showInfo)}>{showInfo ? 'Hide' : 'Show'}>Detail info</button>
+
+      <button onClick={() => setshowInfo(!showInfo)}>
+        {showInfo ? 'Hide' : 'Show'}Detail info
+      </button>
 
       {
         showInfo && <Suspense fallback={<span>Loading...</span>}>
