@@ -6,7 +6,7 @@ const User = ({ user }) => {
   const [showInfo, setshowInfo] = useState(false);
   const { id, name, email, phone } = user;
 
-  const userPromise = fetch(`https://jsonplaceholder.typicode.com/users/5`)
+  const userPromise = fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
   const userStyle = {
     border: '2px solid yellow',
