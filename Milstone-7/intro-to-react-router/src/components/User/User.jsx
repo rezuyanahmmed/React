@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense, useState } from 'react';
 import { Link } from 'react-router';
 
 const User = ({ user }) => {
+
+  const [showInfo, setshowInfo] = useState(false);
 
   const { id, name, email, phone } = user;
 
@@ -18,7 +20,13 @@ const User = ({ user }) => {
       <p>Email:{email} </p>
       <p><small>Phone Number: {phone}</small></p>
       <Link to={`/users/${id}`}>Show details</Link>
-      <button>Detail info</button>
+      <button onClick={() => setshowInfo(!showInfo)}>{showInfo? 'Hide':'Show'}>Detail info</button>
+
+      {
+        showInfo && <Suspense fallback={<span>Loading...</span>}>
+
+        </Suspense>
+      }
     </div>
   );
 };
