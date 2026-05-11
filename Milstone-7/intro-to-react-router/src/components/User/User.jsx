@@ -7,6 +7,7 @@ const User = ({ user }) => {
   const { id, name, email, phone } = user;
 
   const userPromise = fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then(res => res.json());
 
   const userStyle = {
     border: '2px solid yellow',

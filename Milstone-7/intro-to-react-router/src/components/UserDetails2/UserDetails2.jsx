@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { use } from 'react';
 
-const UserDetails2 = () => {
+const UserDetails2 = ({ userPromise }) => {
+  const { name, username } = use(userPromise);
   return (
     <div>
-      
+      <p><span>user name: {username}</span></p>
+      <p>Name: {name}</p>
     </div>
   );
 };
