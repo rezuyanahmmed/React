@@ -1,5 +1,6 @@
 
 import './App.css'
+import SimpleForm from './Components/SimpleForm/SimpleForm'
 
 function App() {
  
@@ -9,6 +10,7 @@ function App() {
      
       
      <h2>Explore React form</h2>
+     <SimpleForm></SimpleForm>
 
       
     </>
