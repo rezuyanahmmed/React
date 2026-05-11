@@ -3,10 +3,10 @@ import { Link } from 'react-router';
 import UserDetails2 from '../UserDetails2/UserDetails2';
 
 const User = ({ user }) => {
-
   const [showInfo, setshowInfo] = useState(false);
-
   const { id, name, email, phone } = user;
+
+  const userPromise = fetch(`https://jsonplaceholder.typicode.com/users/5`)
 
   const userStyle = {
     border: '2px solid yellow',
