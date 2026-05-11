@@ -25,7 +25,7 @@ const User = ({ user }) => {
 
       {
         showInfo && <Suspense fallback={<span>Loading...</span>}>
-          <UserDetails2></UserDetails2>
+          <UserDetails2 userPromise={userPromise}></UserDetails2>
         </Suspense>
       }
     </div>
