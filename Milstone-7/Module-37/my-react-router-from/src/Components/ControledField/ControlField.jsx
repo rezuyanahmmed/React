@@ -6,8 +6,10 @@ const ControlField = () => {
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefult();
+    e.preventDefault();
 
+
+// submit btn e click korar por eror dibe
     if (password.length < 6) {
       setError('password must be 6 charecters')
     } else {
@@ -19,6 +21,8 @@ const ControlField = () => {
   const handlePasswordOnchange = e => {
     console.log(e.target.value);
     setpassword(e.target.value);
+
+    // submit korar agei eror diye dibe ei code tar maddhome
 
     // if (password.length < 6) {
     //   setError('password must be 6 charecters')
@@ -32,10 +36,10 @@ const ControlField = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="email" name="email" id="" placeholder='Email' required />
+        <input type="email" name="email" id="" placeholder='Email' />
         <br />
         <input type="password" name="password" id="" placeholder='password'
-          onChange={handlePasswordOnchange} defaultValue={password} required />
+          onChange={handlePasswordOnchange} defaultValue={password} />
         <br />
         <input type="submit" value="Submit" />
       </form>
