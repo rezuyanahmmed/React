@@ -9,7 +9,7 @@ const FormAction = () => {
 
   return (
     <div>
-      <form action="">
+      <form action={handleFormAction}>
         <input type="text" placeholder='Name' />
         <input type="email" placeholder='Email' />
       </form>
