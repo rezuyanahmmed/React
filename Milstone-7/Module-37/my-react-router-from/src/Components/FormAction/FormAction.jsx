@@ -3,7 +3,8 @@ import React from 'react';
 const FormAction = () => {
 
   const handleFormAction = (formData) =>{
-    console.log(formData);
+    console.log(formData.get('name'));
+    console.log(formData.get('email'));
     
   }
 
