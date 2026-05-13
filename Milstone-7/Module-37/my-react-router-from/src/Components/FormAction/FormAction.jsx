@@ -11,7 +11,10 @@ const FormAction = () => {
     <div>
       <form action={handleFormAction}>
         <input type="text" placeholder='Name' />
+        <br />
         <input type="email" placeholder='Email' />
+        <br />
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
