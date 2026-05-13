@@ -10,7 +10,7 @@ function App() {
      
       
      <h2>Explore React form</h2>
-     <SimpleForm></SimpleForm>
+     {/* <SimpleForm></SimpleForm> */}
 
       
     </>
